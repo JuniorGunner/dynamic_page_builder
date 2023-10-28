@@ -14,8 +14,8 @@ The Dynamic WebPage Builder is a web-based tool that enables users to easily cre
 
 ## Running Locally
 1. **Setup Django Environment**
-   - Clone the repository: `git clone [your-repo-url]`
-   - Navigate to the project directory: `cd [your-project-name]`
+   - Clone this repository: `git clone git@github.com:JuniorGunner/dynamic_page_builder.git`
+   - Navigate to the project directory: `cd dynamic_page_builder`
    - Create a virtual environment: `python -m venv venv`
    - Activate the virtual environment: 
      - On Windows: `venv\Scripts\activate`
@@ -26,11 +26,13 @@ The Dynamic WebPage Builder is a web-based tool that enables users to easily cre
    - Set up the database: `python manage.py makemigrations`
    - Apply the migrations: `python manage.py migrate`
 
-3. **Run with Docker**
-   - Build the Docker image: `docker build -t dynamic-page-builder .`
-   - Run the Docker container: `docker run -d -p 8000:8000 dynamic-page-builder`
+3. **Run with Docker using Makefile**
+   - Build the Docker image: `make build`
+   - Run the Docker container: `make run`
 
-Now, you can navigate to `http://localhost:8000` to access the application.
+To access other utilities, such as creating a superuser, making migrations, or collecting static files, you can utilize the respective commands from the Makefile, e.g., `make createsuperuser`.
+
+Now, you can navigate to http://localhost:8000 to access the application.
 
 ## Future Improvements
 1. **Enhanced UI/UX**: Develop a more intuitive drag-and-drop interface for adding and configuring HTML elements.
@@ -38,5 +40,6 @@ Now, you can navigate to `http://localhost:8000` to access the application.
 3. **Templates**: Offer users a selection of pre-designed templates to start their page designs.
 4. **Responsive Design**: Ensure that user-created pages are mobile-responsive by default.
 5. **Integration with CSS Frameworks**: Allow users to choose from popular CSS frameworks like Bootstrap, Foundation, or Tailwind for styling their pages.
+6. **Unit Tests**: Implement comprehensive unit tests to cover the entirety of the project.
 
 ---
