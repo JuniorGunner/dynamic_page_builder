@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preview</title>
+</head>
+<body>
+    <!-- Display the content without Bootstrap for preview -->
+    {{ preview_content|safe }}
+
+    <!-- A button to confirm creation -->
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Creation" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New WebPage</title>
+</head>
+<body>
+    <h2>Create New WebPage</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create WebPage" />
+    </form>
+</body>
+</html>
